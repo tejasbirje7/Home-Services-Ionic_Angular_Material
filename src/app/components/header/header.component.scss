@@ -1,0 +1,31 @@
+ion-toolbar {
+	--ion-background-color:#fff !important;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+@keyframes fadeIn {
+	from {
+	  opacity: 0;
+	}
+  
+	to {
+	  opacity: 1;
+	}
+  }
+  .fadeIn {
+	animation-name: fadeIn;
+	animation-duration: 4s;
+  }
+
+
+	ion-item.item:hover a {
+		background-color: slategray;
+		box-shadow: inset 0px 0px 0px 1px red;
+	  }
+
+
+	  .title-center {
+		flex: 15 15 auto;
+		text-align: center;
+	  }

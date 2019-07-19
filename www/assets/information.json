@@ -1,0 +1,39 @@
+{
+    "items" : [
+        {
+            "name": "Specials",
+            "children":[
+                {
+                    "name": "Special Academy Pizza",
+                    "information": "This is the pastami based pizza",
+                    "price": "60$"
+                },
+                {
+                    "name": "IOnic Academy Pizza",
+                    "information": "This is the special ionic with acordion based pizza",
+                    "price": "320$"
+                }
+            ]
+        },
+        {
+            "name": "Pizza",
+            "children":[
+                {
+                    "name": "Traditional",
+                    "children":[
+                        {
+                            "name": "Special Academy Pizza",
+                            "information": "This is the pastami based pizza",
+                            "price": "60$"
+                        },
+                        {
+                            "name": "IOnic Academy Pizza",
+                            "information": "This is the special ionic with acordion based pizza",
+                            "price": "320$"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
