@@ -9,32 +9,11 @@ import { SidemenuService } from '../../providers/sidemenu.service';
 })
 export class SidemenuPage implements OnInit {
 
-  pages = [
-    {
-      'title' : 'Home',
-      'url' : '/sidemenu/home',
-      'icon' : '../../../assets/home.png'
-    },
-    {
-      'title' : 'Become a Proffessional',
-      'url' : '/sidemenu/proffessional',
-      'icon' : '../../../assets/proffessional.png'
-    },
-    {
-    'title' : 'Shop',
-    'url' : '/sidemenu/shop',
-    'icon' : '../../../assets/shop.png'
-  },
-    {
-      'title' : 'Help',
-      'url' : '/sidemenu/help',
-      'icon' : '../../../assets/help.png'
-    }
-  ];
+  selections = [];
 
   selectedPath = ""
 
-  constructor(private router: Router, private sidemenu: SidemenuService) { 
+  constructor(private router: Router, private sidemenuService: SidemenuService) { 
     this.router.events
     .subscribe((event: RouterEvent)=>{
       this.selectedPath = event.url;
@@ -42,11 +21,12 @@ export class SidemenuPage implements OnInit {
   }
 
   ngOnInit() {
+    this.selections = this.sidemenuService.get_selections();
   }
 
   setTitle(title: string){
     console.log('Side Menu Title :',title);
-    this.sidemenu.setTitle(title);
+    this.sidemenuService.setTitle(title);
   }
 
 }

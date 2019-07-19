@@ -15,87 +15,10 @@ export class HomePage implements OnInit {
 
   category = '';
   selectedPath = ""
-  pages = [
-    {
-      'title' : 'Cleaning',
-      'url' : '/sidemenu/cleaning',
-      'icon' : '../../../assets/images/cleaning.jpg'
-    },
-    {
-      'title' : 'Electronics',
-      'url' : '/sidemenu/electronics',
-      'icon' : '../../../assets/images/electronics.jpg'
-    },
-    {
-      'title' : 'Assembly',
-      'url' : '/sidemenu/assembly',
-      'icon' : '../../../assets/images/assembly.jpg'
-    },
-    {
-      'title' : 'Plumbing',
-      'url' : '/sidemenu/plumbing',
-      'icon' : '../../../assets/images/plumbing.jpg'
-    },
-    {
-      'title' : 'Housing/Office',
-      'url' : '/sidemenu/housingoffice',
-      'icon' : '../../../assets/images/housingoffice.jpg'
-    },
-    {
-      'title' : 'Delivery',
-      'url' : '/sidemenu/delivery',
-      'icon' : '../../../assets/images/delivery.jpg'
-    },
-    {
-      'title' : 'Moving',
-      'url' : '/sidemenu/moving',
-      'icon' : '../../../assets/images/moving.jpg'
-    },
-    {
-      'title' : 'Storage',
-      'url' : '/sidemenu/storage',
-      'icon' : '../../../assets/images/storage.jpg'
-    }
-  ];
-  items = [
-    {
-      url:'../../../assets/images/shop2.jpg'
-    },
-    {
-      url:'../../../assets/images/shop3.jpg'
-    },
-    {
-      url:'../../../assets/images/shop4.jpg'
-    }
-  ]
-  cardsContent = [
-    {
-      heading : "Select Service",
-      body : "Select the type of service you like to get completed with our assistant",
-      //image : "../../../assets/selectservice.jpg"
-      image : "../../../assets/se.gif"
-    },
-    {
-      heading : "Location Information",
-      body : "Share information of location where the selected service is to be accomplished",
-      //image : "../../../assets/location.jpg"
-      image : "../../../assets/ll.gif"
-    },
-    {
-      heading : "Payment",
-      body : "Pay once the job is completed",
-      //image : "../../../assets/payment.jpg"
-      image : "../../../assets/pp.gif"
-    }
-  ]
+  services = [];
+  ads = [];
+  worksContent = [];
   slides: IonSlides;
-
-
-   sliderConfig = {
-    spaceBetween: 10,
-    centeredSlides: true,
-    slidesPerView: 2.6
-  };
 
   slideOptsOne = {
    initialSlide: 0,
@@ -113,7 +36,6 @@ export class HomePage implements OnInit {
 
   constructor(private router: Router,
      private sideMenuService: SidemenuService,
-      private navCtrl: NavController,
       private dialog: MatDialog,
       private homeService: HomeService) { 
     this.router.events
@@ -123,9 +45,10 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
-    this.homeService.get_products();
-    this.homeService.post_request();
     console.log("In home page");
+    this.services = this.homeService.get_services();
+    this.ads = this.homeService.get_ads();
+    this.worksContent = this.homeService.get_worksContent();
   }
   
   slidesDidLoad(slides: IonSlides) {

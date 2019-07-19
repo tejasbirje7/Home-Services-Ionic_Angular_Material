@@ -9,7 +9,7 @@
 
     <ion-content>
       <ion-list>
-        <ion-menu-toggle auto-hide="false" *ngFor="let p of pages">
+        <ion-menu-toggle auto-hide="false" *ngFor="let p of selections">
           <ion-item
             (click)="setTitle(p.title)"
             [routerLink]="p.url"

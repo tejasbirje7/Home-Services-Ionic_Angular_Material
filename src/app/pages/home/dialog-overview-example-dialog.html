@@ -1,5 +1,4 @@
-<h1 mat-dialog-title>Hi {{data.category}}</h1>
-
+<h1 mat-dialog-title>{{data.category}}</h1>
 
   <form [formGroup]="appDetailsForm">
           <mat-form-field>
@@ -11,7 +10,7 @@
           </mat-form-field>
         
           <mat-form-field>
-              <mat-select formControlName="service" required>
+              <mat-select formControlName="service" placeholder="Locality" required>
                   <mat-option *ngFor="let service of services" value="{{ serv }}">
                     {{ service }}
                   </mat-option>

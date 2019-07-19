@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SidemenuService } from '../../providers/sidemenu.service';
-import { MatToolbar } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-header',

@@ -22,7 +22,7 @@
   "_resolved": "https://registry.npmjs.org/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-4.1.1.tgz",
   "_shasum": "7bdfbfaa498f6bd0f92db4cb51ce0c486ac07233",
   "_spec": "cordova-plugin-ionic-webview@^4.0.0",
-  "_where": "/home/tejas/Teju/JavaScript/Ionic/handy",
+  "_where": "/home/tejas/teju/javascript/pwa_ionic_angular",
   "author": {
     "name": "Ionic Team"
   },
