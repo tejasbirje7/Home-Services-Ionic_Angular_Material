@@ -123,8 +123,8 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
-    this.homeService.get_products();
-    this.homeService.post_request();
+    //this.homeService.get_products();
+    //this.homeService.post_request();
     console.log("In home page");
   }
   
