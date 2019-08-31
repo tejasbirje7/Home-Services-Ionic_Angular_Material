@@ -6,7 +6,8 @@
 **INSTALL**
 
 ```bash
-npm install
+- npm install
+- ionic serve
 ```
 
 **APK GENERATION REQUIREMENTS**
