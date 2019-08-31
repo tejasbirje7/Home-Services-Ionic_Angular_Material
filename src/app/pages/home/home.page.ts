@@ -45,6 +45,11 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
+<<<<<<< HEAD
+=======
+    //this.homeService.get_products();
+    //this.homeService.post_request();
+>>>>>>> 6ae1d2482bd8bb4411ebce77dd9f4a1dc18f7356
     console.log("In home page");
     this.services = this.homeService.get_services();
     this.ads = this.homeService.get_ads();
