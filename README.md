@@ -19,6 +19,10 @@ npm install
 ```
 
 
+**SAMPLE APK PATH**
+- platforms/android/build/outputs/apk/HomeServices.apk
+
+
 **STEPS TO GENERATE APK**
 
 ```
